@@ -1,0 +1,241 @@
+@import url(//fonts.googleapis.com/css?family=Overpass);
+
+*{
+    font-family: 'overpass';
+    font-weight: 400;
+    font-size: 15px;
+
+}
+.reset{
+    margin:0;
+    padding:0;
+}
+
+.gap{
+    margin-top:1.3rem;
+}
+.padding{
+    padding:0.1rem 0.8rem;
+    padding-top: 0.2rem;
+}
+
+.weight{
+    font-weight: 400;
+}
+
+.flex{
+    display:flex;
+}
+.flex-gap{
+    gap:0.8rem;
+}
+.align-center{
+    align-items: center;
+    justify-content: center;
+}
+.direction{
+    flex-direction: column;
+}
+h1{
+    font-weight:600;
+    color:hsl(0, 0%, 100%);
+    font-size:1.75rem;
+
+}
+p{
+    color:hsl(217, 12%, 63%);
+}
+
+html{
+    height:100%;
+    width:100%;
+    
+}
+
+/* this is for content background body */
+body{
+    background:hsl(216, 12%, 8%);
+    width: 100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* grid-template-columns: 30%; */
+}
+
+.wrapper{
+    background:hsl(213, 19%, 18%);
+    padding:3rem 1.7rem 3rem 1.7rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    width:24rem;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+/* end of content background body */
+
+/* this is for star icon in content */
+.star-icon{
+    height:3rem;
+    width:100%;
+    display: grid;
+    align-items: center;
+}
+.star-icon span{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:3rem;
+    height: 3rem;
+    border-radius: 100%;
+    background:hsl(216, 12%, 54%,0.1);
+
+}
+
+/* this is end of star icon */
+
+/* start of content  */
+.content{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.content > *{
+    margin:0;
+    padding:0;
+}
+.content > h1{
+    margin-top:1rem;
+}
+.content > p{
+    width:95%;
+}
+
+
+/* end of content */
+
+/* ratings */
+.options{
+    margin-top:1rem;
+    color:hsl(217, 12%, 63%);
+    display:grid;
+    grid-template-columns: repeat(5,21%);
+}
+
+.ratings{
+opacity:0;
+position:fixed;
+width:0;
+}
+.options > label{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    background:hsl(216, 12%, 54%,0.1);
+    border-radius: 100%;
+    height:3rem;
+    width:3rem;
+}
+
+.options label:hover{
+    cursor: pointer;
+    background:hsl(25, 97%, 53%);
+    color:hsl(0, 0%, 100%);
+}
+.ratings:checked + label{
+    background:hsl(216, 12%, 54%,0.7);
+    color:hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+.ratings:checked:hover
++ label{
+    cursor: pointer;
+    background:hsl(25, 97%, 53%);
+    color:hsl(0, 0%, 100%);
+}
+
+/* ratings end */
+
+
+/* submit */
+.submit{
+    display:grid;
+    grid-template-columns: 100%;
+    align-items:center;
+    justify-content: center;
+}
+.submit-btn{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background:hsl(25, 97%, 53%);
+    color:hsl(0, 0%, 100%);
+    width:100%;
+    height:2.5rem;
+    border:0;
+    border-radius: 1rem;
+    
+    text-transform: uppercase;
+}
+.submit-btn:hover{
+    background:hsl(0, 0%, 100%);
+    color:hsl(25, 97%, 53%);
+};
+
+/* end of submit button */
+
+/* thank you start */
+
+.rating-display{
+    background:hsl(216, 12%, 54%);
+    color: hsl(25, 97%, 53%);
+}
+
+
+.p-width{
+    width:95%;
+}
+/* hsl(216, 12%, 54%,0.1) */
+
+.attribution{
+    display: none;
+}
+
+@media screen and (max-width:375px) {
+.wrapper{
+    flex-direction: column;
+    border-radius: 1rem;
+    width:82%;
+    padding:3rem 0.6rem 3rem 0.6rem;
+}
+.gap{
+    margin-top:0.9rem;
+}
+
+.main-bodyreview{
+    width: 92%;
+}
+.main-bodythanks{
+    width:100%;
+}
+
+.ratings:checked + label{
+    background:hsl(216, 12%, 54%,0.7);
+    color:hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+
+.ratings:checked:hover
++ label{
+    cursor: pointer;
+    background:hsl(216, 12%, 54%,0.7);
+    color:hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+} 
